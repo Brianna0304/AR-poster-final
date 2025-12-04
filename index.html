@@ -17,7 +17,7 @@
     >
       <!-- Marker: patternUrl auf deine .patt -->
       <a-marker type="pattern" url="hiro.patt">
-        <!-- Video: plane durch a-video ersetzt -->
+        <!-- Hier haben wir nur das Plane durch Video ersetzt -->
         <a-video
           src="#video1"
           position="0 0 0"
@@ -28,12 +28,13 @@
           loop="true"
         ></a-video>
 
-        <!-- Videoquelle definieren -->
+        <!-- Videoquelle -->
         <a-assets>
           <video id="video1" src="Komp 1.mp4" autoplay loop crossorigin="anonymous"></video>
         </a-assets>
       </a-marker>
 
+      <!-- Damit AR auch ohne Marker was sieht -->
       <a-entity camera></a-entity>
     </a-scene>
   </body>
