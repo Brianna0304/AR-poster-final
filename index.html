@@ -15,26 +15,24 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
+      <!-- Assets sollten außerhalb des Markers stehen -->
+      <a-assets>
+        <video id="video1" src="Komp 1.mp4" autoplay loop muted crossorigin="anonymous"></video>
+      </a-assets>
+
       <!-- Marker: patternUrl auf deine .patt -->
       <a-marker type="pattern" url="hiro.patt">
-        <!-- Hier haben wir nur das Plane durch Video ersetzt -->
+        <!-- Video auf dem Marker -->
         <a-video
           src="#video1"
           position="0 0 0"
           rotation="-90 0 0"
           width="1"
           height="1"
-          autoplay="true"
-          loop="true"
         ></a-video>
-
-        <!-- Videoquelle -->
-        <a-assets>
-          <video id="video1" src="Komp 1.mp4" autoplay loop crossorigin="anonymous"></video>
-        </a-assets>
       </a-marker>
 
-      <!-- Damit AR auch ohne Marker was sieht -->
+      <!-- Kamera -->
       <a-entity camera></a-entity>
     </a-scene>
   </body>
